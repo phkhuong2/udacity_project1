@@ -172,6 +172,8 @@ resource "azurerm_linux_virtual_machine" "main" {
     version   = "latest"
   }
 
+  source_image_id = var.packerImageId
+  
   os_disk {
     storage_account_type = "Standard_LRS"
     caching              = "ReadWrite"
